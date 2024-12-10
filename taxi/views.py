@@ -1,9 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from django.views import View, generic
+from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib import messages
 
 
 from taxi.forms import CarForm, DriverCreationForm, DriverLicenseUpdateForm

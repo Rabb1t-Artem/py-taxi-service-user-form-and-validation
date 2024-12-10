@@ -8,7 +8,6 @@ from .views import (
     CarListView,
     CarUpdateView,
     assign_user_to_car,
-    # remove_user_from_car,
     DriverCreateView,
     DriverUpdateView,
     DriverDetailView,

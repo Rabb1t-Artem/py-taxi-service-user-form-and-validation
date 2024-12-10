@@ -15,9 +15,13 @@ class DriverLicenseValidateMixin:
             license_number[:3].upper() != license_number[:3]
             or license_number[:3].isalpha() is False
         ):
-            raise forms.ValidationError("License number must be alphanumeric")
+            raise forms.ValidationError(
+                "The last 5 characters of the license number must be digits"
+            )
         if license_number[3:].isdigit() is False:
-            raise forms.ValidationError("License number must be alphanumeric")
+            raise forms.ValidationError(
+                "License number must be in format AAA12345"
+            )
         return license_number
 
 
